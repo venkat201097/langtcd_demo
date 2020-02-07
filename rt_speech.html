@@ -46,22 +46,29 @@
     <br>
 </div>
 </div>
+<br>
+<br>
 <p></p>
 <p></p>
 <div class="container text-center">    
 <div class="meta">
-<a href="javascript:load_files('c');"><input type="button" id="load_chin" value="Chinese" class="btn btn-full"></a><br />
+<a href="javascript:load_files('c');" style="margin-left:50px;margin-right:50px"><input type="button" id="load_chin" value="Chinese" class="btn btn-full"></a>
+<a href="javascript:load_files('e');" style="margin-left:50px;margin-right:50px"><input type="button" id="load_eng" value="English" class="btn btn-full"></a><br />
 </div>
 <p></p>
+<p></p>
 </div>
-<div class="container text-center">    
+<!-- <div class="container ">    
 <div class="meta">
 <a href="javascript:load_files('e');"><input type="button" id="load_eng" value="English" class="btn btn-full"></a><br />
 </div>
-</div>
+</div> -->
 
 <div>
-<p></p>
+<br>
+<br>
+
+
 </div>
     
 <div class="container text-center">    
@@ -75,29 +82,33 @@
 <!-- <div class="container text-center">    
 <div class="timer">00:00:00</div>
 </div> -->
-    
-    
-<div class="container text-center">        
-<div class="meta">
-<a href="javascript:next_trial('audioFile');"><input type="button" id="nextTrial" value="Next" disabled class="btn btn-full"></a><br />
-</div>
-</div>
 
     
 <div>
 <p></p>
 </div>
+<br>
+<br>
 
     
 <div class="container text-center">        
 <div class="meta">
-<a href="javascript:hitpressed('1');"><input type="button" id="hitPressed1" value="1" disabled="true" class="btn btn-full"></a><br />
+<a href="javascript:hitpressed('1');" style="margin-left:75px;margin-right:75px"><input type="button" id="hitPressed1" value="1" disabled="true" class="btn btn-full"></a>
+<a href="javascript:hitpressed('2');" style="margin-left:75px;margin-right:75px"><input type="button" id="hitPressed2" value="2" disabled="true" class="btn btn-full"></a><br />
 </div>
 </div>
 <p></p>
-<div class="container text-center">        
+<!-- <div class="container text-center">        
 <div class="meta">
 <a href="javascript:hitpressed('2');"><input type="button" id="hitPressed2" value="2" disabled="true" class="btn btn-full"></a><br />
+</div>
+</div> -->
+<p></p>
+<br>
+<br>
+<div class="container text-center">        
+<div class="meta">
+<a href="javascript:next_trial('audioFile');"><input type="button" id="nextTrial" value="Next" disabled class="btn btn-full"></a><br />
 </div>
 </div>
 
@@ -218,7 +229,7 @@ onclick = "writeData('fileWriteAudio.php','targetDiv1')" disabled class="btn btn
                 output += " False Alarm!"
             }
         }
-        temp_str = output+"\nYour reaction time is "+rt_time+ " msec";
+        temp_str = output+"\nYour reaction time is "+rt_time/1000+ " sec";
             alert(temp_str);
         // }
         // else if (rt_time<200) {
